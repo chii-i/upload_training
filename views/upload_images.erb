@@ -1,0 +1,10 @@
+<h1>画像投稿掲示板</h1>
+
+<form method="post" action="/uploads" enctype="multipart/form-data">
+  <input type="file" name="image"><br>
+  <input type="submit" value="投稿">
+</form>
+
+ <% result.each{|file_name| %>
+<img width='320' src='/upload_images/<%= file_name[1] %>'/><br>
+<% } %>

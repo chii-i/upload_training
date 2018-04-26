@@ -1,0 +1,14 @@
+<h1>コメント一覧</h1>
+<form method="post" action="comments">
+  <input type="text" name="comment" placeholder="コメントを入力してね">
+  <input type="submit" value="登録">
+</form>
+
+<form method="get" action="comments">
+  <input type="text" name="filter" placeholder="検索ワードを入力してね">
+  <input type="submit" value="検索">
+</form>
+
+ <% result.each{|comment| %>
+<%= comment[1] %><br>
+<% } %>
