@@ -105,6 +105,7 @@ get '/uploads' do
         inputimage  = {
           result: db.execute("SELECT * FROM upload_images WHERE id = ?", params['id'])
         }
+        erb :image_detail, :locals => inputimage
     end
 end
 
