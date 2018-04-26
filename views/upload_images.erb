@@ -5,6 +5,8 @@
   <input type="submit" value="投稿">
 </form>
 
- <% result.each{|file_name| %>
-<img width='320' src='/upload_images/<%= file_name[1] %>'/><br>
+<% result.each{|file_name| %>
+  <a href="uploads?id=<%= file_name[0] %>">
+  <img width='320' src='/upload_images/<%= file_name[1] %>'/><br>
+  </a>
 <% } %>
